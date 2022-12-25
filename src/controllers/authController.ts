@@ -38,7 +38,7 @@ const register: RequestHandler = async (req, res) => {
     verificationToken,
   });
 
-  const origin = "http://localhost:3000";
+  const origin = "https://green-it-server.onrender.com";
 
   await sendVerificationEmail({
     name: user.name,
@@ -153,7 +153,7 @@ const forgetPassword: RequestHandler = async (req, res) => {
   const user = await User.findOne({ email });
   if (user) {
     const verificationToken = crypto.randomBytes(70).toString("hex");
-    const origin = "http://localhost:3000";
+    const origin = "https://green-it-server.onrender.com";
     await sendResetPasswordEmail({
       name: user.name,
       email: user.email,
