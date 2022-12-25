@@ -9,11 +9,10 @@ import {
   attachCookiesToResponse,
   createHash,
 } from "../utils";
+import { TokenInt } from "../ts/interfaces/models";
 import { RequestUser } from "../ts/interfaces/globalInterfaces";
 import { BadRequestError, UnauthenticatedError } from "../errors";
 import crypto from "crypto";
-
-import { TokenInt } from "../ts/interfaces/models";
 
 const deletedAllUsers: RequestHandler = async (req, res) => {
   await User.deleteMany();
