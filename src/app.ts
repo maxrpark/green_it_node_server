@@ -30,9 +30,14 @@ import cookieParser from "cookie-parser";
 import helmet from "helmet";
 import cors from "cors";
 // import xss from "xss-clean";
-const xss = require("xss-clean"); // FIX
-
+import xss from "xss-clean";
+import mongoSanitize from "express-mongo-sanitize";
 const app = express();
+
+app.use(express.json());
+app.use(helmet());
+app.use(xss());
+app.use(mongoSanitize());
 
 // express middleware and package
 
