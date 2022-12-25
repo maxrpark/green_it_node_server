@@ -78,6 +78,7 @@ const createOrder = async (req: RequestUser, res: Response) => {
     total,
     subtotal,
     clientSecret,
+    status: "paid",
     user: req.user!.userId,
   });
 
