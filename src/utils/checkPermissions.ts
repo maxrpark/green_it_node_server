@@ -7,7 +7,8 @@ const checkPermissions = (
 ) => {
   if (
     requestUser.role === "admin" ||
-    (resourceUserId && requestUser.userId === resourceUserId.toString())
+    (resourceUserId && requestUser.userId === resourceUserId.toString()) ||
+    requestUser.role === "supervisor"
   ) {
     return;
   } else {

@@ -38,8 +38,8 @@ const showCurrentUser = async (req: RequestUser, res: Response) => {
 };
 
 const updateUser = async (req: RequestUser, res: Response) => {
-  if (req.user?.role === "supervisor") {
-    throw new UnauthorizedError("Supervisor can not edit user details");
+  if (req.user?.role === "supervisor" || req.user?.name == "user test") {
+    throw new UnauthorizedError("This account can not be edited");
   }
 
   const { email, name } = req.body;
@@ -63,8 +63,10 @@ const updateUser = async (req: RequestUser, res: Response) => {
 };
 
 const updatePassword = async (req: RequestUser, res: Response) => {
-  if (req.user?.role === "supervisor") {
-    throw new UnauthorizedError("Supervisor can not edit user details");
+  console.log(req.user?.name);
+
+  if (req.user?.role === "supervisor" || req.user?.name == "user test") {
+    throw new UnauthorizedError("This account can not be edited");
   }
 
   const { oldPassword, newPassword } = req.body;
