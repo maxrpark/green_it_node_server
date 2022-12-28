@@ -1,13 +1,45 @@
-# Green it!
+# Green it
 
-# Stack
+[Visit](https://green-it-nextjs.vercel.app/)
 
-- Frontend: Next.js
-- Backend: Node.js
+## E-commerce store Green it
 
-## TODO
+An online store for plants, decorations, and products for the garden.
 
-### Backend
+## Frontend:
+
+- Next.js
+- Repo: [https://github.com/maxrpark/green_it_nextjs](https://github.com/maxrpark/green_it_nextjs)
+- Deploy: Vercel
+
+# Backend:
+
+- Nodejs
+- Repo: (https://github.com/maxrpark/green_it_node_server)[https://github.com/maxrpark/green_it_node_server]
+- Deploy: Render
+
+Design and CSS:
+
+- My design, took many ideas from tailwind
+- Figma:
+- Library: tailwind
+
+## Type us users
+
+### Customer:
+
+Before completing your order you need to create a profile and verify your email.
+You will then have access to all your orders and change your information (email, name, and password)
+
+### Admin
+
+Control the entire store, create, delete or update any product, see all orders, and see each user and their orders.
+
+### Supervisor
+
+Can access all the routes an admin can but can not edit anything.
+
+### Backend TODO
 
 ### Auth
 
@@ -43,15 +75,4 @@
 - [x] Update order
 - [x] Create stripe checkout
 
-### TODO
-
-- [x] Confirm email frontend
-- [x] Reset password frontend
-- [x] Create co-admin user backend
-- [ ] manage co-admin frontend
-- [ ] create model for product images
-- [ ] change img tag for NextImage tag
-- [x] Change login button text
-- [x] supervisor messages
-- [ ] supervisor can not change information
 # green_it_node_server

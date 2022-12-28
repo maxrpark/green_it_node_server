@@ -16,7 +16,8 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 });
 
 const getAllOrders: RequestHandler = async (req, res) => {
-  const orders = await Order.find({});
+  const orders = await Order.find({}).sort("-createdAt");
+
   res.status(StatusCodes.OK).json({ orders: orders, count: orders.length });
 };
 
@@ -101,7 +102,7 @@ const getSingleOrder = async (req: RequestUser, res: Response) => {
 
 const getSingleUserOrders = async (req: RequestUser, res: Response) => {
   const { id } = req.params;
-  const orders = await Order.find({ user: id });
+  const orders = await Order.find({ user: id }).sort("-createdAt");
 
   const reqUser = req.user;
   if (reqUser) {
