@@ -21,7 +21,7 @@ An online store for plants, decorations, and products for the garden.
 Design and CSS:
 
 - My design, took many ideas from tailwind
-- Figma:
+- Figma: (https://www.figma.com/file/nxtxMQjZIsxUjlIrynncJM/Green-it?node-id=10%3A311&t=4CT8MMFqKQsuN6yH-0)[https://www.figma.com/file/nxtxMQjZIsxUjlIrynncJM/Green-it?node-id=10%3A311&t=4CT8MMFqKQsuN6yH-0]
 - Library: tailwind
 
 ## Type us users
